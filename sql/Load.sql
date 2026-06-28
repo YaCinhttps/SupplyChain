@@ -126,3 +126,16 @@ SELECT 'shipping',                  COUNT(*)              FROM shipping
 ORDER BY table_name;
 
 
+
+
+ALTER TABLE orders
+ALTER COLUMN order_date TYPE TIMESTAMP
+USING order_date::TIMESTAMP;
+
+ALTER TABLE shipping
+ALTER COLUMN shipping_date TYPE TIMESTAMP
+USING shipping_date::TIMESTAMP;
+
+-- Verify
+SELECT pg_typeof(order_date)    FROM orders   LIMIT 1;
+SELECT pg_typeof(shipping_date) FROM shipping LIMIT 1;

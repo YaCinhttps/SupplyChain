@@ -117,6 +117,7 @@ CREATE INDEX idx_products_department    ON products(department_name);
 CREATE INDEX idx_customers_segment      ON customers(segment);
 CREATE INDEX idx_customers_country      ON customers(country);
 
+
 -- ─────────────────────────────────────────────
 -- Verify tables were created
 -- ─────────────────────────────────────────────
@@ -129,3 +130,5 @@ FROM information_schema.tables t
 WHERE table_schema = 'public'
   AND table_type = 'BASE TABLE'
 ORDER BY table_name;
+
+
