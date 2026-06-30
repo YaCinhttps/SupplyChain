@@ -1,6 +1,5 @@
 -- ============================================================
 -- Supply Chain & E-Commerce Project
--- Script: 02_sales_performance.sql
 -- Business Questions: Sales Performance
 -- ============================================================
 
@@ -117,3 +116,6 @@ SELECT
 FROM order_items oi
 JOIN orders o ON oi.order_id = o.order_id
 WHERE o.order_status NOT IN ('Canceled', 'Suspected_Fraud');
+
+
+SELECT MAX(order_date) FROM orders;

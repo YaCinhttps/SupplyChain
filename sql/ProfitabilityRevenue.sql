@@ -2,7 +2,6 @@
 
 -- ============================================================
 -- Supply Chain & E-Commerce Project
--- Script: 01_revenue_profitability.sql
 -- Business Questions: Revenue & Profitability
 -- ============================================================
 
