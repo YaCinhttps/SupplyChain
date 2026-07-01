@@ -275,3 +275,107 @@ Top cities are dominated by **Latin American capitals** alongside major US citie
 This points to one of two realities: either the business has a strong cohort of historically loyal, high-value customers who are now going quiet (a retention risk worth investigating), or there's been a recent shift toward acquiring new, lower-value customers rather than nurturing repeat high-spenders (an acquisition strategy question). Either way, **At Risk (8,120 customers, $2,939.07 avg spend) is the single most important segment to act on** — it's the largest group by far and holds substantial historical value, but recency is slipping (337 days since last order). A win-back campaign targeted at this segment alone touches nearly $23.9M in historical spend ($2,939.07 × 8,120).
 ---
 
+### 4. Logistics & Delivery
+ 
+**Q: What is the overall late delivery rate?**
+ 
+| Delivery Status | Orders | % of Total |
+|----------------|--------|------------|
+| Late Delivery | 36,048 | 54.82% |
+| Advance Shipping | 15,127 | 23.01% |
+| Shipping On Time | 11,722 | 17.83% |
+| Shipping Canceled | 2,855 | 4.34% |
+ 
+**Insight:** Over half of all orders arrive late — 54.82% late delivery rate is a critical operational problem. Only 17.83% arrive on time, with 23.01% arriving early. This is the single most damaging operational issue in the dataset and should be the centerpiece of the logistics dashboard page.
+ 
+---
+ 
+**Q: Which shipping modes have the highest late delivery rate?**
+ 
+| Shipping Mode | Orders | Late Orders | Late Rate % | Avg Actual Days | Avg Scheduled Days | Avg Delay |
+|--------------|--------|-------------|-------------|-----------------|--------------------|-----------| 
+| First Class | 10,079 | 9,602 | **95.27%** | 2.00 | 1.00 | 1.00 |
+| Second Class | 12,778 | 9,803 | **76.72%** | 4.00 | 2.00 | 2.00 |
+| Same Day | 3,571 | 1,648 | 46.15% | 0.48 | 0.00 | 0.48 |
+| Standard Class | 39,324 | 14,995 | 38.13% | 4.00 | 4.00 | 0.00 |
+ 
+**Insight:** First Class is the most misleading shipping mode in the entire dataset — it has a **95.27% late delivery rate**, meaning customers paying for expedited shipping almost never receive their order on time. The root cause is clear: First Class promises delivery in 1 day but consistently takes 2, making every order 1 day late by definition. Second Class has the same structural problem — promises 2 days, takes 4. Standard Class is the only mode where scheduled and actual days match (both 4.00), giving it the healthiest on-time rate at 61.87%. Same Day at 53.85% on-time is also problematic given the premium expectation.
+ 
+---
+ 
+**Q: What is the gap between scheduled and actual delivery days?**
+ 
+| Mode | Scheduled | Actual | Avg Delay | Max Delay | Min Delay |
+|------|-----------|--------|-----------|-----------|-----------|
+| Second Class | 2.00 | 4.00 | 2.00 | 4 | 0 |
+| First Class | 1.00 | 2.00 | 1.00 | 1 | 1 |
+| Same Day | 0.00 | 0.48 | 0.48 | 1 | 0 |
+| Standard Class | 4.00 | 4.00 | 0.00 | 2 | -2 |
+ 
+**Insight:** Standard Class is the only mode that actually meets its promise — zero average delay, and it even delivers early sometimes (min delay = -2 days). First Class has a fixed 1-day delay on every single order (min = max = 1), which strongly suggests the scheduled day estimate is systematically wrong rather than reflecting real logistics variance. This is likely a data entry or system configuration issue — whoever set up the scheduled delivery fields for First Class appears to have set them 1 day too optimistic across the board.
+ 
+---
+ 
+**Q: Which markets have the worst delivery performance?**
+ 
+| Market | Orders | Late Orders | Late Rate % | Avg Actual Days | Avg Delay |
+|--------|--------|-------------|-------------|-----------------|-----------|
+| Pacific Asia | 17,577 | 9,720 | 55.30% | 3.51 | 0.58 |
+| Europe | 18,561 | 10,199 | 54.95% | 3.50 | 0.57 |
+| USCA | 8,579 | 4,704 | 54.83% | 3.49 | 0.57 |
+| LATAM | 17,181 | 9,339 | 54.36% | 3.50 | 0.56 |
+| Africa | 3,854 | 2,086 | 54.13% | 3.50 | 0.55 |
+ 
+**Insight:** Late delivery is a global problem — all 5 markets sit within a 1.2 percentage point range (54.13%–55.30%). This tells you the issue is not geographic or regional — it's systemic. The problem sits in the shipping mode scheduling logic (as identified above), not in specific market logistics. Fixing the First Class and Second Class scheduled day estimates would likely improve all markets simultaneously.
+ 
+---
+ 
+**Q: Which regions have the worst late delivery rates?**
+ 
+Top 5 worst regions by late rate: Central Africa (57.55%), East Africa (56.77%), South of USA (55.99%), West Asia (55.98%), and Eastern Europe (55.96%). The range across all 20 regions is tight (53.49%–57.55%) — again consistent with a systemic scheduling issue rather than regional logistics failures.
+ 
+---
+ 
+**Q: Which product categories are most frequently late?**
+ 
+Top 5 categories by late rate: Golf Bags & Carts (68.85%), Lacrosse (60.06%), Pet Supplies (58.94%), Cameras (58.11%), and Strength Training (57.66%). The bottom of the list — Men's Golf Clubs (47.70%) and Computers (50.68%) — are notably better, though still above 47%. The spread across categories (47%–69%) is wider than across markets, suggesting product-level handling or warehouse location may contribute to delays on top of the scheduling issue.
+ 
+---
+ 
+**Q: What is the financial cost of late deliveries?**
+ 
+| Delivery Type | Orders | Avg Revenue | Avg Profit | Total Profit | Margin % |
+|--------------|--------|-------------|------------|--------------|----------|
+| On Time | 29,704 | $204.29 | $22.40 | $1,826,851 | 10.97% |
+| Late | 36,048 | $203.34 | $21.62 | $2,140,051 | 10.63% |
+ 
+**Insight:** Late deliveries are marginally less profitable (10.63% vs 10.97% margin) but the difference is small — only $0.78 less profit per order on average. Unlike the Olist dataset where late delivery caused a 1.72-star review score drop, this data doesn't show a dramatic financial penalty per order. The bigger cost is volume-driven: 36,048 late orders × $0.78 lost profit = approximately **$28,000 in foregone profit** directly attributable to late delivery. The real business case for fixing delivery performance here is customer satisfaction and retention, not immediate per-order profitability.
+ 
+---
+ 
+**Q: Is Same Day actually faster — and which mode has the best on-time rate?**
+ 
+| Mode | Avg Actual Days | Avg Scheduled Days | On-Time Rate % |
+|------|-----------------|--------------------|-----------------| 
+| Same Day | 0.48 | 0.00 | 53.85% |
+| Standard Class | 4.00 | 4.00 | **61.87%** |
+| Second Class | 4.00 | 2.00 | 23.28% |
+| First Class | 2.00 | 1.00 | 4.73% |
+ 
+**Insight:** Standard Class has the best on-time rate (61.87%) — more reliable than Same Day (53.85%), First Class (4.73%), or Second Class (23.28%). Customers choosing premium shipping modes for reliability are actually getting worse service than those choosing the cheapest option. This is a major customer trust and pricing integrity issue.
+ 
+---
+ 
+**Q: Which markets have the highest cancellation rate?**
+ 
+| Market | Orders | Canceled | Cancellation Rate % |
+|--------|--------|----------|----------------------|
+| USCA | 8,579 | 401 | 4.67% |
+| LATAM | 17,181 | 767 | 4.46% |
+| Europe | 18,561 | 798 | 4.30% |
+| Africa | 3,854 | 165 | 4.28% |
+| Pacific Asia | 17,577 | 724 | 4.12% |
+ 
+**Insight:** Cancellation rates are consistent across markets (4.12%–4.67%), with USCA marginally highest. No market has a standout cancellation problem — this is another systemic pattern rather than a regional one.
+ 
+---
