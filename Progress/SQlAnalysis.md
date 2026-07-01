@@ -379,3 +379,201 @@ Top 5 categories by late rate: Golf Bags & Carts (68.85%), Lacrosse (60.06%), Pe
 **Insight:** Cancellation rates are consistent across markets (4.12%–4.67%), with USCA marginally highest. No market has a standout cancellation problem — this is another systemic pattern rather than a regional one.
  
 ---
+### 5. Product & Geographic Analysis
+ 
+**Q: Which product categories have the highest profit ratio?**
+ 
+| Category | Avg Profit Ratio | Avg Discount Rate | Total Revenue | Total Profit |
+|----------|-----------------|-------------------|---------------|--------------|
+| Golf Bags & Carts | 0.1915 | 0.0934 | $10,369 | $1,810 |
+| Toys | 0.1619 | 0.1017 | $6,104 | $900 |
+| Fitness Accessories | 0.1512 | 0.1026 | $35,601 | $5,258 |
+| Women's Clothing | 0.1510 | 0.1020 | $140,283 | $19,102 |
+| Soccer | 0.1465 | 0.0961 | $26,477 | $3,901 |
+| Women's Golf Clubs | 0.1456 | 0.1017 | $44,545 | $5,028 |
+| Men's Golf Clubs | 0.1456 | 0.0991 | $47,035 | $5,517 |
+| Music | 0.1426 | 0.1014 | $113,122 | $14,436 |
+| Garden | 0.1425 | 0.1012 | $257,768 | $33,443 |
+| Baby | 0.1394 | 0.1043 | $12,229 | $1,525 |
+ 
+**Insight:** Golf Bags & Carts has the highest profit ratio (19.15%) but the lowest discount rate (9.34%) — confirming that holding price drives margin. However total revenue is tiny ($10K) so it's not a volume driver. Women's Clothing and Garden are more interesting: high profit ratios AND meaningful revenue. The categories with highest total revenue (Fishing, Cleats, Camping & Hiking from the profitability section) sit in the mid-range on profit ratio (~12%), meaning the business earns its profit through volume on those lines, not margin.
+ 
+---
+ 
+**Q: Does heavy discounting kill margins?**
+ 
+Discount rates are remarkably uniform across all categories — nearly every category sits between 0.0991 and 0.1026 discount rate. The only meaningful outliers are Golf Bags & Carts (0.0934, lowest) and As Seen On TV! (0.1094, highest). This is consistent with the earlier finding that discount buckets have minimal impact on profit ratio — discounting appears to be a fixed, standardised policy across the business rather than a category-level lever.
+ 
+---
+ 
+**Q: Are there loss-making product lines?**
+ 
+Query returned empty — no categories have a consistently negative average profit per order. The two loss-making combinations identified in the profitability section (As Seen On TV! in LATAM, Boxing & MMA in Africa) are market-specific anomalies, not product-level structural losses.
+ 
+---
+ 
+**Q: Do cheaper products sell in higher quantities?**
+ 
+| Price Bucket | Orders | Avg Quantity | Avg Revenue | Avg Profit Ratio |
+|-------------|--------|--------------|-------------|------------------|
+| Under $50 | 43,407 | 2.90 | $119.01 | 0.1203 |
+| $50–$99 | 61,072 | 2.98 | $194.01 | 0.1229 |
+| $100–$199 | 39,351 | 1.00 | $158.85 | 0.1185 |
+| $200–$499 | 35,717 | 1.00 | $351.27 | 0.1196 |
+| $500+ | 972 | 1.00 | $1,001.41 | 0.1255 |
+ 
+**Insight:** There's a clear quantity break at the $100 threshold — products under $100 sell in quantities of ~2.9–3.0 per order, while products $100+ are almost always bought one at a time (avg quantity = 1.00). The $50–$99 bucket generates the most orders (61,072) and has the second-highest profit ratio (0.1229), making it the sweet spot for volume and margin combined. High-ticket items ($500+) have the best profit ratio (0.1255) but tiny volume (972 orders) — a premium niche, not a growth engine.
+ 
+---
+ 
+**Q: Which products generate the most revenue?**
+ 
+| Product | Category | Department | Orders | Revenue | Profit |
+|---------|----------|------------|--------|---------|--------|
+| Field & Stream Sportsman 16 Gun Fire Safe | Fishing | Fan Shop | 17,325 | $6,929,653 | $756,220 |
+| Perfect Fitness Perfect Rip Deck | Cleats | Apparel | 24,515 | $4,421,143 | $493,828 |
+| Diamondback Women's Serene Classic Comfort Bi | Camping & Hiking | Fan Shop | 13,729 | $4,118,425 | $427,455 |
+| Nike Men's Free 5.0+ Running Shoe | Cardio Equipment | Footwear | 12,169 | $3,667,633 | $379,915 |
+| Nike Men's Dri-FIT Victory Golf Polo | Women's Apparel | Golf | 21,035 | $3,147,800 | $350,421 |
+ 
+**Insight:** The top revenue product (Field & Stream Gun Safe, $6.9M) earns more than the next two products combined — a highly concentrated top-product dynamic. Fan Shop department dominates the top 5 (3 out of 5 products). The Dell Laptop stands out in 10th place — only 442 orders but $663,000 in revenue ($1,500 avg per order), which is 7.6x the average order value. A small but extremely high-value SKU worth protecting.
+ 
+---
+ 
+**Q: Which global markets drive the most value?**
+ 
+| Market | Orders | Countries | Revenue | Profit | Margin % | AOV |
+|--------|--------|-----------|---------|--------|----------|-----|
+| Europe | 17,763 | 37 | $10,405,371 | $1,131,937 | 10.88% | $216.37 |
+| LATAM | 16,414 | 29 | $9,824,329 | $1,069,050 | 10.88% | $199.24 |
+| Pacific Asia | 16,853 | 47 | $7,942,351 | $826,167 | 10.40% | $200.64 |
+| USCA | 8,178 | 2 | $4,836,413 | $539,223 | 11.15% | $196.39 |
+| Africa | 3,689 | 49 | $2,205,963 | $240,041 | 10.88% | $197.77 |
+ 
+**Insight:** Europe and LATAM are nearly identical on profit margin (both 10.88%) but Europe has a $22 higher average order value. USCA has the best margin (11.15%) and highest AOV despite serving only 2 countries — the most efficient market per order. Africa serves the most countries (49) relative to its order volume (3,689) — wide geographic spread but thin penetration, pointing to an untapped growth opportunity if logistics improve. Pacific Asia serves 47 countries at the lowest margin (10.40%) — maximum geographic complexity for minimum margin return.
+ 
+---
+ 
+**Q: Which countries generate the most volume?**
+ 
+USA dominates (7,887 orders, $4.6M revenue), followed by France (4,648 orders, $2.75M) and Mexico (4,201 orders, $2.52M). UK has the highest average order value of the top 10 ($220.88). Indonesia rounds out the top 10 with solid numbers ($810K revenue, $83K profit) — a Pacific Asia market worth watching for growth.
+ 
+---
+ 
+**Q: Where is fraud most concentrated?**
+ 
+| Market | Region | Fraud Orders | Revenue at Risk | % of Market |
+|--------|--------|-------------|-----------------|-------------|
+| Europe | Western Europe | 250 | $148,507 | 58.69% |
+| LATAM | Central America | 211 | $126,740 | 53.02% |
+| LATAM | South America | 119 | $71,856 | 29.90% |
+| Pacific Asia | Oceania | 100 | $45,386 | 27.10% |
+| Pacific Asia | Southeast Asia | 84 | $38,558 | 22.76% |
+ 
+**Insight:** Western Europe accounts for 58.69% of all European fraud orders — disproportionately high for the region that generates the most revenue. Central America similarly drives 53% of all LATAM fraud. Total suspected fraud revenue at risk across all regions is approximately **$825,934** (consistent with the order status analysis in Section 2). Fraud is not evenly distributed — it concentrates in high-volume regions, which makes sense as higher transaction volume creates more fraud surface area.
+ 
+---
+ 
+**Q: What is the overall late delivery rate?**
+ 
+| Delivery Status | Orders | % of Total |
+|----------------|--------|------------|
+| Late Delivery | 36,048 | 54.82% |
+| Advance Shipping | 15,127 | 23.01% |
+| Shipping On Time | 11,722 | 17.83% |
+| Shipping Canceled | 2,855 | 4.34% |
+ 
+**Insight:** Over half of all orders arrive late — 54.82% late delivery rate is a critical operational problem. Only 17.83% arrive on time, with 23.01% arriving early. This is the single most damaging operational issue in the dataset and should be the centerpiece of the logistics dashboard page.
+ 
+---
+ 
+**Q: Which shipping modes have the highest late delivery rate?**
+ 
+| Shipping Mode | Orders | Late Orders | Late Rate % | Avg Actual Days | Avg Scheduled Days | Avg Delay |
+|--------------|--------|-------------|-------------|-----------------|--------------------|-----------| 
+| First Class | 10,079 | 9,602 | **95.27%** | 2.00 | 1.00 | 1.00 |
+| Second Class | 12,778 | 9,803 | **76.72%** | 4.00 | 2.00 | 2.00 |
+| Same Day | 3,571 | 1,648 | 46.15% | 0.48 | 0.00 | 0.48 |
+| Standard Class | 39,324 | 14,995 | 38.13% | 4.00 | 4.00 | 0.00 |
+ 
+**Insight:** First Class is the most misleading shipping mode in the entire dataset — it has a **95.27% late delivery rate**, meaning customers paying for expedited shipping almost never receive their order on time. The root cause is clear: First Class promises delivery in 1 day but consistently takes 2, making every order 1 day late by definition. Second Class has the same structural problem — promises 2 days, takes 4. Standard Class is the only mode where scheduled and actual days match (both 4.00), giving it the healthiest on-time rate at 61.87%. Same Day at 53.85% on-time is also problematic given the premium expectation.
+ 
+---
+ 
+**Q: What is the gap between scheduled and actual delivery days?**
+ 
+| Mode | Scheduled | Actual | Avg Delay | Max Delay | Min Delay |
+|------|-----------|--------|-----------|-----------|-----------|
+| Second Class | 2.00 | 4.00 | 2.00 | 4 | 0 |
+| First Class | 1.00 | 2.00 | 1.00 | 1 | 1 |
+| Same Day | 0.00 | 0.48 | 0.48 | 1 | 0 |
+| Standard Class | 4.00 | 4.00 | 0.00 | 2 | -2 |
+ 
+**Insight:** Standard Class is the only mode that actually meets its promise — zero average delay, and it even delivers early sometimes (min delay = -2 days). First Class has a fixed 1-day delay on every single order (min = max = 1), which strongly suggests the scheduled day estimate is systematically wrong rather than reflecting real logistics variance. This is likely a data entry or system configuration issue — whoever set up the scheduled delivery fields for First Class appears to have set them 1 day too optimistic across the board.
+ 
+---
+ 
+**Q: Which markets have the worst delivery performance?**
+ 
+| Market | Orders | Late Orders | Late Rate % | Avg Actual Days | Avg Delay |
+|--------|--------|-------------|-------------|-----------------|-----------|
+| Pacific Asia | 17,577 | 9,720 | 55.30% | 3.51 | 0.58 |
+| Europe | 18,561 | 10,199 | 54.95% | 3.50 | 0.57 |
+| USCA | 8,579 | 4,704 | 54.83% | 3.49 | 0.57 |
+| LATAM | 17,181 | 9,339 | 54.36% | 3.50 | 0.56 |
+| Africa | 3,854 | 2,086 | 54.13% | 3.50 | 0.55 |
+ 
+**Insight:** Late delivery is a global problem — all 5 markets sit within a 1.2 percentage point range (54.13%–55.30%). This tells you the issue is not geographic or regional — it's systemic. The problem sits in the shipping mode scheduling logic (as identified above), not in specific market logistics. Fixing the First Class and Second Class scheduled day estimates would likely improve all markets simultaneously.
+ 
+---
+ 
+**Q: Which regions have the worst late delivery rates?**
+ 
+Top 5 worst regions by late rate: Central Africa (57.55%), East Africa (56.77%), South of USA (55.99%), West Asia (55.98%), and Eastern Europe (55.96%). The range across all 20 regions is tight (53.49%–57.55%) — again consistent with a systemic scheduling issue rather than regional logistics failures.
+ 
+---
+ 
+**Q: Which product categories are most frequently late?**
+ 
+Top 5 categories by late rate: Golf Bags & Carts (68.85%), Lacrosse (60.06%), Pet Supplies (58.94%), Cameras (58.11%), and Strength Training (57.66%). The bottom of the list — Men's Golf Clubs (47.70%) and Computers (50.68%) — are notably better, though still above 47%. The spread across categories (47%–69%) is wider than across markets, suggesting product-level handling or warehouse location may contribute to delays on top of the scheduling issue.
+ 
+---
+ 
+**Q: What is the financial cost of late deliveries?**
+ 
+| Delivery Type | Orders | Avg Revenue | Avg Profit | Total Profit | Margin % |
+|--------------|--------|-------------|------------|--------------|----------|
+| On Time | 29,704 | $204.29 | $22.40 | $1,826,851 | 10.97% |
+| Late | 36,048 | $203.34 | $21.62 | $2,140,051 | 10.63% |
+ 
+**Insight:** Late deliveries are marginally less profitable (10.63% vs 10.97% margin) but the difference is small — only $0.78 less profit per order on average.  this data doesn't show a dramatic financial penalty per order. The bigger cost is volume-driven: 36,048 late orders × $0.78 lost profit = approximately **$28,000 in foregone profit** directly attributable to late delivery. The real business case for fixing delivery performance here is customer satisfaction and retention, not immediate per-order profitability.
+ 
+---
+ 
+**Q: Is Same Day actually faster — and which mode has the best on-time rate?**
+ 
+| Mode | Avg Actual Days | Avg Scheduled Days | On-Time Rate % |
+|------|-----------------|--------------------|-----------------| 
+| Same Day | 0.48 | 0.00 | 53.85% |
+| Standard Class | 4.00 | 4.00 | **61.87%** |
+| Second Class | 4.00 | 2.00 | 23.28% |
+| First Class | 2.00 | 1.00 | 4.73% |
+ 
+**Insight:** Standard Class has the best on-time rate (61.87%) — more reliable than Same Day (53.85%), First Class (4.73%), or Second Class (23.28%). Customers choosing premium shipping modes for reliability are actually getting worse service than those choosing the cheapest option. This is a major customer trust and pricing integrity issue.
+ 
+---
+ 
+**Q: Which markets have the highest cancellation rate?**
+ 
+| Market | Orders | Canceled | Cancellation Rate % |
+|--------|--------|----------|----------------------|
+| USCA | 8,579 | 401 | 4.67% |
+| LATAM | 17,181 | 767 | 4.46% |
+| Europe | 18,561 | 798 | 4.30% |
+| Africa | 3,854 | 165 | 4.28% |
+| Pacific Asia | 17,577 | 724 | 4.12% |
+ 
+**Insight:** Cancellation rates are consistent across markets (4.12%–4.67%), with USCA marginally highest. No market has a standout cancellation problem — this is another systemic pattern rather than a regional one.
+ 
+---
+

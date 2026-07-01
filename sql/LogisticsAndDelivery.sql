@@ -1,6 +1,5 @@
 -- ============================================================
 -- Supply Chain & E-Commerce Project
--- Script: 04_logistics_delivery.sql
 -- Business Questions: Logistics & Delivery Performance
 -- ============================================================
 
