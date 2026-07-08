@@ -1,13 +1,8 @@
-# Page 2 — Logistics & Delivery Dashboard
-
-## Status: ✅ Done
 
 ---
-
 ## What This Page Answers
 
 This page puts the operational health of the business under a microscope. It moves beyond revenue and profit to ask a harder question — **are we actually delivering on our promises to customers?** The answer, across every market, region, and shipping mode, is that we are not.
-
 ---
 
 ## The Story This Page Tells
