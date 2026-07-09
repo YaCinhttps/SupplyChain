@@ -1,0 +1,68 @@
+Differnts Kind Of Questions And BI Can Find The Answer 
+
+Revenue & Profitability
+
+What is total revenue, total profit, and overall profit margin across the full period?
+Which product categories generate the most revenue vs the most profit? (They won't be the same)
+Which departments are most profitable?
+What is the average profit per order — and which order types drag it down?
+How does discount rate affect profit ratio? Is discounting actually hurting us?
+Which markets (USCA, Europe, LATAM, Pacific Asia, Africa) are most profitable — not just highest revenue?
+Are there categories or markets where we're selling at a loss?s
+
+Sales Performance
+
+How has revenue trended month over month? Are we growing or declining?
+Which months are peak sales periods? Is there seasonality?
+What is the average order value overall, and broken down by market and category?
+Which shipping modes are customers using most — and does mode affect order value?
+What percentage of orders are canceled, suspected fraud, or on hold — and what is the revenue impact?
+Which transaction types (debit, transfer, cash, payment) dominate?
+
+
+Customer Behavior
+
+Which customer segment (Consumer, Corporate, Home Office) generates the most revenue and profit?
+Which segment has the highest average order value?
+Which countries and cities generate the most sales?
+What is the sales per customer average across segments?
+Are Corporate customers more profitable per order than Consumer customers despite fewer orders?
+
+
+Logistics & Delivery
+
+What is the overall late delivery rate?
+Which shipping modes have the highest late delivery rate?
+What is the gap between scheduled and actual delivery days — on average and by mode?
+Which markets have the worst delivery performance?
+Which product categories are most frequently late?
+Is there a correlation between order size/value and late delivery risk?
+What percentage of late deliveries were flagged by the late delivery risk model correctly?
+What is the financial cost of late deliveries — are late orders less profitable?
+
+
+Product & Category
+
+Which product categories have the highest profit ratio per order?
+Which categories have the highest discount rates — and is heavy discounting correlated with low profit?
+Which departments contribute most to overall company revenue?
+Are there products or categories with consistently negative profit per order?
+What is the relationship between product price and order quantity?
+
+
+Operational Efficiency
+
+What is the average processing time from order date to ship date?
+Which shipping mode is fastest on average vs scheduled?
+Are Same Day and First Class shipping actually delivering faster — or just costing more?
+What proportion of orders have a delivery status of "Shipping Canceled" — and in which markets?
+Which markets have the highest order cancellation rate?
+
+
+Geographic & Market Analysis
+
+Which global markets drive the most volume vs the most profit?
+Which order regions have the highest late delivery rates?
+Are certain regions associated with higher fraud risk (suspected fraud status)?
+How does average order value differ across markets?
+Which countries are emerging as growth markets based on order volume trend?

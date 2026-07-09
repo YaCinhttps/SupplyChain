@@ -254,13 +254,12 @@ Top cities are dominated by **Latin American capitals** alongside major US citie
 | Loyal | 8,036 | 39.66% | 5.60 |
 | Returning | 3,608 | 17.81% | 2.58 |
  
-**Insight:** This is a strong retention profile — only 42.5% of customers are one-time buyers, and nearly 40% are Loyal customers averaging 5.6 orders each. Compare this to the Olist e-commerce project where 97% of customers never returned — this business has a fundamentally healthier repeat-purchase model, likely because it isn't a pure marketplace but a B2B/B2C hybrid (note the Consumer/Corporate/Home Office segments).
+**Insight:** This is a strong retention profile — only 42.5% of customers are one-time buyers, and nearly 40% are Loyal customers averaging 5.6 orders each.  —this business has a fundamentally healthier repeat-purchase model, likely because it isn't a pure marketplace but a B2B/B2C hybrid (note the Consumer/Corporate/Home Office segments).
  
 ---
  
 **Q: Who are the most valuable customers? (RFM Segmentation)**
  
-**Note on methodology:** The initial RFM query had two bugs that were identified and fixed during analysis: (1) the recency NTILE ordering was inverted, scoring the most recently active customers as least recent; (2) the standard "Champions" threshold (recent AND high-frequency) matched zero customers, because this dataset shows an inverse relationship between recency and frequency — see insight below. The Champions threshold was adjusted from `f_score >= 3` to `f_score >= 2` to reflect this real pattern in the data rather than force-fit a textbook definition. Corrected query available in `sql/CustomerBehaviour.sql`.
  
 | Segment | Customers | Avg Spend | Avg Orders | Avg Recency (days) |
 |---------|-----------|-----------|------------|----------------------|
