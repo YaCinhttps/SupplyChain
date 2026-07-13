@@ -131,26 +131,9 @@ Wrote 38 queries across 5 SQL files to answer real business questions covering r
 - The **$50–$99 price bucket** is the volume and margin sweet spot — most orders, second-highest profit ratio
 - **RFM analysis revealed an inverse recency-value pattern** — most recently active customers are low-spend first-time buyers, while highest-value customers haven't ordered in months
 
----
+More In Progres Folder (SQlAnalysis.md)
 
-## Phase 4 — Python EDA
 
-Translated 8 key SQL findings into focused charts using matplotlib and seaborn. Each chart confirms a specific business insight and feeds directly into the Power BI dashboard narrative.
-
-**Charts produced:**
-
-| # | Chart | Key insight confirmed |
-|---|-------|-----------------------|
-| 1 | Monthly revenue trend (Jan 2015 – Nov 2017) | Stable ~$1M/month for 35 months |
-| 2 | Top 10 categories by revenue vs profit | Revenue and profit rankings are identical |
-| 3 | Discount rate vs profit ratio (scatter) | Near-uniform discount rates, no margin impact |
-| 4 | Late delivery rate by shipping mode | First Class 95% vs Standard Class 38% |
-| 5 | Scheduled vs actual days by mode | 1-day scheduling gap on First Class confirmed |
-| 6 | Late delivery rate by market | All markets 54–55% — systemic not regional |
-| 7 | RFM segments — count and avg spend | At Risk is largest and highest-value dormant group |
-| 8 | Revenue and profit by customer segment | Margins identical across segments |
-
----
 
 ## Phase 5 — Power BI dashboard
 
@@ -160,13 +143,21 @@ Built a three-page interactive dashboard in Power BI Desktop connected directly 
 
 A bird's-eye view of overall business performance. Revenue was flat and stable across the full period — the business is predictable rather than high-growth, which has its own value for planning. Fan Shop, Apparel, and Golf drive the majority of revenue and profit. Europe is the largest market but USCA is the most efficient. The most important finding hidden below the headline numbers: $1.57M in suspected fraud and canceled orders, and $8.1M in unconfirmed pending payments.
 
+![Sales Dashboard](/images/Sales.png)
+
+
 **Page 2 — Logistics & Delivery**
 
 The operational health page. 54.82% of orders arrive late — but the root cause is not a logistics breakdown, it is a scheduling misconfiguration. First Class promises 1 day and takes 2. Second Class promises 2 days and takes 4. Standard Class is the only mode that delivers what it promises. The fix requires no operational change — only a correction to the scheduled delivery day estimates in the system. The map confirms the problem is global and uniform, not concentrated in any region.
 
+![Logistics Dashboard](/images/Logistics.png)
+
+
 **Page 3 — Customer Segmentation**
 
+
 The retention and value page. 57.5% of customers are repeat buyers — a strong foundation compared to pure marketplace businesses. But the RFM analysis reveals a structural risk: the highest-value customers are going quiet. At Risk customers average $2,939 in historical spend and haven't ordered in over 300 days. Champions — the most recently active group — spend only $269 on average. The business is acquiring new low-value customers while its most valuable ones disengage.
+![Customers Dashboard](/images/Customers.png)
 
 ---
 
@@ -203,17 +194,3 @@ The retention and value page. 57.5% of customers are repeat buyers — a strong 
 
 ---
 
-## How to run this project
-
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Place the raw CSV in `data/raw/`
-4. Run `01_cleaning.ipynb` to clean the data and produce 5 clean CSVs in `data/clean/`
-5. Run `sql/01_create_schema.sql` in PostgreSQL to create the schema
-6. Update file paths in `sql/02_load_data.sql` and run to load the data
-7. Run `sql/03_validate_load.sql` to verify the load
-8. Run SQL analysis files in `sql/analysis/` to produce result CSVs
-9. Run `03_eda.ipynb` to generate EDA charts
-10. Open `dashboard/supply_chain.pbix` in Power BI Desktop and refresh the PostgreSQL connection
-
----
